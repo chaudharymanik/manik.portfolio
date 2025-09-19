@@ -6,7 +6,7 @@ import { ChevronDown, Cloud, Server, Database } from "lucide-react"
 
 export default function Hero() {
   const [text, setText] = useState("")
-  const fullText = "Building scalable apps with a dash of data & cloud."
+  const fullText = "Technologies internship in full stack development with a dash of data & cloud."
 
   useEffect(() => {
     let i = 0
@@ -122,7 +122,7 @@ export default function Hero() {
             View My Work
           </motion.a>
           <motion.a
-            href="/resume.pdf"
+            href="/Manik_Chaudhary_resume.pdf"
             download
             whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(250, 204, 21, 0.5)" }}
             whileTap={{ scale: 0.95 }}

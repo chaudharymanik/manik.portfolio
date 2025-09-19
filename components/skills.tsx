@@ -30,8 +30,7 @@ export default function Skills() {
       skills: [
         { name: "Node.js", level: 85, icon: "🟢" },
         { name: "Python", level: 80, icon: "🐍" },
-        { name: "MongoDB", level: 85, icon: "🍃" },
-        { name: "MySQL", level: 80, icon: "🐬" },
+        { name: "MySQL", level: 85, icon: "🐬" },
         { name: "Express.js", level: 85, icon: "⚡" },
       ],
     },

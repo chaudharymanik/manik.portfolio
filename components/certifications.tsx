@@ -24,7 +24,7 @@ export default function Certifications() {
     {
       title: "Data Structures & Algorithms",
       issuer: "Udemy",
-      date: "2023",
+      date: "2024",
       status: "Completed",
       description:
         "Deep dive into algorithmic thinking and problem-solving. This wasn't just about memorizing patterns - it was about understanding how to think like a computer scientist.",

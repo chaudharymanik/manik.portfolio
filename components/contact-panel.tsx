@@ -23,7 +23,7 @@ const socials = [
   {
     label: "LINKEDIN",
     value: "linkedin.com/in/manikchaudhary",
-    href: "https://linkedin.com/in/manikchaudhary",
+    href: "https://linkedin.com/in/chaudharymanik",
     icon: "hub",
   },
   {

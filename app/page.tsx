@@ -1,48 +1,27 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
-import Hero from "@/components/hero"
-import About from "@/components/about"
-import Experience from "@/components/experience"
-import Projects from "@/components/projects"
-import Skills from "@/components/skills"
-import Certifications from "@/components/certifications"
-import Contact from "@/components/contact"
 import Navigation from "@/components/navigation"
-import ParticleBackground from "@/components/particle-background"
-import FloatingClouds from "@/components/floating-clouds"
+import Hero from "@/components/hero"
+import Systems from "@/components/systems"
+import DeploymentLog from "@/components/deployment-log"
+import StackManifest from "@/components/stack-manifest"
+import ProfilePanel from "@/components/profile-panel"
+import ContactPanel from "@/components/contact-panel"
+import Footer from "@/components/footer"
 
 export default function Portfolio() {
-  const [mounted, setMounted] = useState(false)
-  const { scrollYProgress } = useScroll()
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
-
   return (
-    <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: "#0e0f0f", color: "#f5f5f4" }}>
-      <ParticleBackground />
-      <FloatingClouds />
+    <div className="min-h-screen">
       <Navigation />
-
-      <motion.div style={{ opacity }} className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#5eead4]/10 via-[#facc15]/5 to-[#1c1f1f]/20" />
-      </motion.div>
-
-      <main className="relative z-10">
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Certifications />
-        <Contact />
+      <Hero />
+      <main className="max-w-container-max mx-auto px-margin py-20 space-y-32">
+        <Systems />
+        <DeploymentLog />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          <StackManifest />
+          <ProfilePanel />
+        </div>
+        <ContactPanel />
       </main>
+      <Footer />
     </div>
   )
 }

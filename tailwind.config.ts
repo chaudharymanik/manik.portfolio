@@ -1,98 +1,107 @@
 import type { Config } from "tailwindcss";
 
-// all in fixtures is set to tailwind v3 as interims solutions
-
 const config: Config = {
-    darkMode: ["class"],
-    content: [
+  darkMode: ["class"],
+  content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "*.{js,ts,jsx,tsx,mdx}"
+    "*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-  	extend: {
-  		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
-  			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
-  			},
-  			popover: {
-  				DEFAULT: 'hsl(var(--popover))',
-  				foreground: 'hsl(var(--popover-foreground))'
-  			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
-  			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
-  			},
-  			muted: {
-  				DEFAULT: 'hsl(var(--muted))',
-  				foreground: 'hsl(var(--muted-foreground))'
-  			},
-  			accent: {
-  				DEFAULT: 'hsl(var(--accent))',
-  				foreground: 'hsl(var(--accent-foreground))'
-  			},
-  			destructive: {
-  				DEFAULT: 'hsl(var(--destructive))',
-  				foreground: 'hsl(var(--destructive-foreground))'
-  			},
-  			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
-  			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
-  			},
-  			sidebar: {
-  				DEFAULT: 'hsl(var(--sidebar-background))',
-  				foreground: 'hsl(var(--sidebar-foreground))',
-  				primary: 'hsl(var(--sidebar-primary))',
-  				'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-  				accent: 'hsl(var(--sidebar-accent))',
-  				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-  				border: 'hsl(var(--sidebar-border))',
-  				ring: 'hsl(var(--sidebar-ring))'
-  			}
-  		},
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		},
-  		keyframes: {
-  			'accordion-down': {
-  				from: {
-  					height: '0'
-  				},
-  				to: {
-  					height: 'var(--radix-accordion-content-height)'
-  				}
-  			},
-  			'accordion-up': {
-  				from: {
-  					height: 'var(--radix-accordion-content-height)'
-  				},
-  				to: {
-  					height: '0'
-  				}
-  			}
-  		},
-  		animation: {
-  			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
-  		}
-  	}
+    extend: {
+      colors: {
+        "on-primary-fixed": "#001f23",
+        "tertiary-container": "#ffb954",
+        "error-container": "#93000a",
+        "on-secondary": "#28313e",
+        outline: "#869395",
+        error: "#ffb4ab",
+        "on-error-container": "#ffdad6",
+        "secondary-container": "#3e4755",
+        "on-secondary-fixed": "#131c28",
+        "on-primary-fixed-variant": "#004f56",
+        "surface-tint": "#4fd8e8",
+        "primary-fixed": "#8ef2ff",
+        "surface-container-low": "#191c21",
+        "outline-variant": "#3c494b",
+        "primary-fixed-dim": "#4fd8e8",
+        "tertiary-fixed": "#ffddb4",
+        "on-error": "#690005",
+        "tertiary-fixed-dim": "#ffb955",
+        tertiary: "#ffddb4",
+        border: "#2A2F3A",
+        background: "#12151A",
+        "on-secondary-container": "#adb6c6",
+        "on-tertiary-fixed": "#291800",
+        "on-background": "#e1e2e9",
+        "secondary-fixed": "#dae3f4",
+        "on-tertiary": "#452b00",
+        primary: "#8df2ff",
+        "primary-container": "#4fd8e8",
+        "surface-container-highest": "#32353a",
+        "inverse-on-surface": "#2e3036",
+        "on-surface-variant": "#bbc9cb",
+        "on-primary": "#00363c",
+        "on-tertiary-fixed-variant": "#633f00",
+        "surface-bright": "#36393f",
+        "secondary-fixed-dim": "#bec7d8",
+        "surface-container-lowest": "#0b0e13",
+        "surface-dim": "#101418",
+        surface: "#1B2028",
+        "text-primary": "#E8EAED",
+        "surface-container-high": "#272a2f",
+        "system-bg": "#12151A",
+        secondary: "#bec7d8",
+        "on-tertiary-container": "#734a00",
+        "success-muted": "#5FBE8C",
+        "inverse-surface": "#e1e2e9",
+        "surface-variant": "#32353a",
+        "on-surface": "#e1e2e9",
+        "on-secondary-fixed-variant": "#3e4755",
+        "on-primary-container": "#005b64",
+        "surface-container": "#1d2025",
+        "inverse-primary": "#006972",
+        "status-amber": "#F5A623",
+        "track-fullstack": "#4FD8E8",
+        "track-cloud": "#F5A623",
+        "track-ai": "#B18CF5",
+      },
+      borderRadius: {
+        DEFAULT: "0.125rem",
+        lg: "0.25rem",
+        xl: "0.5rem",
+        full: "0.75rem",
+      },
+      spacing: {
+        "container-max": "1280px",
+        "stack-lg": "32px",
+        unit: "4px",
+        "stack-md": "16px",
+        "stack-sm": "8px",
+        margin: "24px",
+        gutter: "16px",
+      },
+      fontFamily: {
+        "display-sm": ["Space Grotesk", "sans-serif"],
+        "display-lg": ["Space Grotesk", "sans-serif"],
+        "metric-xl": ["JetBrains Mono", "monospace"],
+        "headline-md": ["Space Grotesk", "sans-serif"],
+        "label-caps": ["JetBrains Mono", "monospace"],
+        "code-sm": ["JetBrains Mono", "monospace"],
+        "body-lg": ["Public Sans", "sans-serif"],
+        "body-md": ["Public Sans", "sans-serif"],
+      },
+      fontSize: {
+        "display-sm": ["1.5rem", { lineHeight: "1.2" }],
+        "display-lg": ["3.5rem", { lineHeight: "1.05" }],
+        "metric-xl": ["2.25rem", { lineHeight: "1.1" }],
+        "headline-md": ["1.25rem", { lineHeight: "1.3" }],
+        "label-caps": ["0.75rem", { lineHeight: "1.4", letterSpacing: "0.08em" }],
+        "code-sm": ["0.875rem", { lineHeight: "1.5" }],
+      },
+    },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
 export default config;

@@ -2,65 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
 
 @layer base {
-  * {
-    @apply border-border;
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    background-color: #0e0f0f;
-    color: #f5f5f4;
-    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans",
-      "Helvetica Neue", sans-serif;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 600;
-    letter-spacing: -0.025em;
+    background-color: #12151a;
+    color: #e8eaed;
+    scrollbar-width: thin;
+    scrollbar-color: #2a2f3a #12151a;
   }
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+.status-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Custom scrollbar */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.terminal-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.terminal-scroll::-webkit-scrollbar-track {
+  background: #0b0e13;
+}
+
+.terminal-scroll::-webkit-scrollbar-thumb {
+  background: #2a2f3a;
+}
+
+.count-up {
+  transition: opacity 0.5s ease-out;
+}
+
+.project-card {
+  transition: opacity 0.3s ease;
+}
+
+.project-card.dimmed {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1c1f1f;
+  background: #0b0e13;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #5eead4;
+  background: #2a2f3a;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4ade80;
-}
-
-/* Selection styling */
-::selection {
-  background: rgba(94, 234, 212, 0.3);
-  color: #f5f5f4;
-}
-
-/* Focus styles */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-  outline: 2px solid #5eead4;
-  outline-offset: 2px;
+  background: #4fd8e8;
 }

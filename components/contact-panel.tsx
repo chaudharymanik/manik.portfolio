@@ -22,7 +22,7 @@ const contactDetails = [
 const socials = [
   {
     label: "LINKEDIN",
-    value: "linkedin.com/in/manikchaudhary",
+    value: "linkedin.com/in/chaudharymanik",
     href: "https://linkedin.com/in/chaudharymanik",
     icon: "hub",
   },
